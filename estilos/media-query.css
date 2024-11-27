@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*TABLET*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    body {
+        background-image: linear-gradient(to top, #19a09d, #5f2c82);
+    }
+    section#login {
+        width:90vw;
+    }
+    section#login > div#imagem {
+        float:left; /*O float serve para posicionar um elemento para um determinado lado, seja direito ou esquerdo*/
+        width: 30%; /*Aqui estamoas determinando que a imagem ocupe 30% da largura do container da section*/
+        height: 100%;/*Aqui estamos determinando que a imagem vai ter 100% da altura da section*/
+    }
+    section#login > div#formulario {
+        float: right;/*O float serve para posicionar um elemento para um determinado lado, seja direito ou esquerdo*/
+        width: 65%;/*Como a imagem esta ocupando 30$% da largura da tela, então o formulário vai ficar com o restante da largura que seria 70%, porém deve se levar em consideração um pequeno espaço quedeve ter , então foi atribuído 65% de largura para o formulário e os 5% restantes ficam sendo o espaço que preciso.*/
+    }
+
+}
+
+/*DESKTOP*/
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
+    body {
+        background-image: linear-gradient(to top, #19a09d, #5f2c82);
+    }
+    section#login {
+        width: 90vw;
+    }
+    section#login > div#imagem {
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+    section#login > div#formulario {
+        float: left;
+        width: 50%;
+    }
+
+}
+
+/*MONITORES EXTERNOS*/
+@media screen and (min-width: 1201px) {
+
+    body {
+        background-image: linear-gradient(to top, #19a09d, #5f2c82);
+    }
+    section#login {
+        width: 1200px;
+    }
+    section#login > div#imagem {
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+    section#login > div#formulario {
+        float: left;
+        width: 50%;
+    }
+
+}
+
