@@ -8,6 +8,7 @@
     }
     section#login {
         width:90vw;
+        height: 310px;
     }
     section#login > div#imagem {
         float:left; /*O float serve para posicionar um elemento para um determinado lado, seja direito ou esquerdo*/
@@ -36,6 +37,7 @@
     }
     section#login {
         width: 90vw;
+        height: 400px;
     }
     section#login > div#imagem {
         float: right;
@@ -63,6 +65,7 @@
     }
     section#login {
         width: 1200px;
+        height: 400px;
     }
     section#login > div#imagem {
         float: right;
