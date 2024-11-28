@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
     <main>
@@ -15,8 +16,28 @@
             </div>
             <div id="formulario">
                 <h1>Login</h1>
+
                 <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form action="login.php" method="post">
+
+                <form action="login.php" method="post" autocomplete="on"><!--Aqui acionamos o autocomple no form e atribuímos um método post para ele, pois como sabemos, quando se trata de dados sensiveis, o metodo post é o indicado por preservar parcialmente esses dados, els não apareceram na url. Vale lembrar que só usando o metodo post não é o suficiente para seus dados ficarem salvos, ainda sim seria possível de uma forma um pouco mais avançada, descobrir seus dados-->
+
+                    <div class="campos">
+
+                        <span class="material-symbols-outlined">person</span><!--Esta tag foi exportada diretamente do google simbolos para inserir um icone no nosso input de email do usuário-->
+                        <input type="email" name="login" id="ilogin" placeholder="Seu e-mail" autocomplete="email" required><!--Aqui estamos usando um autocomplete personalizado para email-->
+                        <label for="ilogin">Login</label>
+                    </div>
+
+                    <div class="campos">
+                        
+                        <span class="material-symbols-outlined">vpn_key</span><!--Esta tag foi exportada diretamente do google simbolos para inserir um icone no nosso input de email do usuário-->
+                        <input type="password" name="senha" id="isenha" placeholder="Senha do Usuário" autocomplete="current-password" required minlength="8" maxlength="12"><!--Aqui estamos usando um autocomplete personalizado para email-->
+                        <label for="isenha">Senha</label>
+
+                    </div>
+                    
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html" class="botao">Esqueci a Senha <span class="material-symbols-outlined">mail</span></a>
 
                 </form>
             </div>

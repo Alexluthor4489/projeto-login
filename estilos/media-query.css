@@ -18,6 +18,13 @@
         float: right;/*O float serve para posicionar um elemento para um determinado lado, seja direito ou esquerdo*/
         width: 65%;/*Como a imagem esta ocupando 30$% da largura da tela, então o formulário vai ficar com o restante da largura que seria 70%, porém deve se levar em consideração um pequeno espaço quedeve ter , então foi atribuído 65% de largura para o formulário e os 5% restantes ficam sendo o espaço que preciso.*/
     }
+    div#formulario > p {
+        font-size: 1.2em;
+    }
+    div#formulario > h1 {
+        font-size: 1.5em;
+    }
+
 
 }
 
@@ -39,6 +46,12 @@
         float: left;
         width: 50%;
     }
+    div#formulario > p {
+        font-size: 1.3em;
+    }
+    div#formulario > h1 {
+        font-size: 2em;
+    }
 
 }
 
@@ -59,6 +72,12 @@
     section#login > div#formulario {
         float: left;
         width: 50%;
+    }
+    div#formulario > p {
+        font-size: 1.3em;
+    }
+    div#formulario > h1 {
+        font-size: 2em;
     }
 
 }

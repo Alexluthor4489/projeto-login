@@ -24,20 +24,80 @@ section#login {
     overflow: hidden;/*Note que a imagem das engrenagens ficou com suas pontas superiores saltando para fora do main. O overflow com o atributo hidden faz com que tudo que esteja fora da forda seja cortado*/
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 520px;
     border-radius: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.498);
-    
-    transition: width 0.5s, heigth 0.5s;
+    transition: width 0.5s, height 0.5s;/*Aqui estamos aplicando uma transição que vai gerar um efeito que suavisa quando a imagem trocar de forma durante a mudança de telas*/
+    transition-timing-function: ease; /*Está sendo usado para que o tempo da transição seja ainda mais suavizado. */
 }
-#imagem {
+section#login > div#imagem {
+    display: block;
     background: blueviolet url('../imagens/imagem-login.jpg') no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-size: cover;/*Aqui estamos usando o cover para nossa imagem cobrir toda a nossa section*/
+    background-position: center center; /*aqui optei em focar no centro absoluto da imagem por entender que é a parte mais atrativa*/
     height: 200px;
     
-     
 }
-#formulario{
+section#login > div#formulario{
+    display: block;/*Aqui estamos usando um display bloxk para que o formulário tenha seus inputs um em cima do outro*/
+    padding: 10px; /*Aqui estamos dando para nosso imput um espaçamento de 10px*/
+
+}
+
+div#formulario > h1 {
+    text-align: center;/*Aqui estamos centralizando o H1*/
+    padding-bottom: 10px;/*aquiesxtamos dando um espaçamento de 10px para o H1*/
+}
+
+div#formulario > p {
+    font-size: 1em; /*Aqui estamos atribuindo um tamanho de 1em, ou seja, a fonte vai sempre manter o tamanho original*/
+}
+form > div.campos {/*Essa div campos foi criada nos dois input que temos com intuito de ter uma estilização individual. Como nosso input vai ter duas cores, uma sobrepondo a outra, então é necessário termos duas estilizações diferentes*/
+    background-color: #5f2c82; /*Aplicando uma cor de fundo que ao final vai está presente no fundo dos simbolos, ou seja, atrás do bonequinho e da chave.*/
+    display: block;/*Estamos usando por boas práticas para que os inputs fiquem um debaixo do outro*/
     padding: 10px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin:5px 0px ;
+}
+div.campos > label {
+    display: none;
+}
+form > input[type=submit] {/*Aqui estamos dizendo que vamos estilizar é um input do type submit e está dentro da tag form. Essa é uma forma que temos para estilizar o que seria o botão*/
+    display: block;/*Posiciona um botão acima do outro*/
+    text-align: center;/*Centraliza o texto que está dentro do botão ou no caso do input que está fazendo o papel do botão.*/
+    font-size: 1em;/*Deixando a fonte em seu tamanho padrão*/
+    color: white;
+    width: 100%;/*Para que o input do type submit, ocupe toda a largura do form*/
+    height: 40px;/*Atribuindo a mesma altura de 40px para ele, para ficar idêntico aos demais*/
+    background-color: #49a09d;
+    padding: 5px;
+    border: none;/*tirando as bordas do input*/
+    border-radius: 5px;
+    cursor: pointer;/*Criando um cursor para os inputs do type submit*/
+}
+form > input[type=submit]:hover{
+    background-color: #317e7b;
+}
+form > a.botao{/*No HTML não foi criado um botão para não ter a necessidade de usar JS, então criamos uma teg a para criar um link e em seguida demos a ela uma class de nome botao para estilizala do jeto que precisamos*/
+    display: block;/*Por boas práticas para ficar um em cima do outro*/
+    text-align: center; /*Centralizar o texto contido na tag <a>*/
+    font-size: 1em;/*Mantendo o tamanho original da fonte*/
+    width: 100%;/*Usando 100% da largura do form*/
+    height: 40px;/*Dando a mesma altura de 40px parta  manter o padrão idêntico aos demais*/
+    padding-top: 5px;
+    margin-top: 5px;/*Criando um espaço entre botao de esqueci minha senha e o de Entrar*/
+    background-color: white;
+    border: 1px solid #49a09d;
+    border-radius: 5px;
+    text-decoration: none; /*Como usamos a tag a esttamos falando então de um link, com isso temos por padrão um tex decoration underline. Aqui estamos ocutando toda e qualquer decoration com o atributo none*/
+    color:#1d5d5b ;
+}
+form > a.botao:hover {
+    background-color: #7be4e0;
+}
+form > a.botao > span {
+    font-size: 1em;/*Atribuíndo um tamanho para o símbolo de email para ficar proporcional ao tamanho da fonte do texto ao lado "Esqueci minha senha"*/
+    
 }
